@@ -42,7 +42,7 @@ const LoginFormOrganism: React.FC<Props> = ({loginUser}) => {
                 }}
                 error={formik.errors.password}
             />
-            <Button w="100%" type="submit" size="lg" bg="primary.100">
+            <Button w="100%" type="submit" size="lg" color="white" bg="primary.100">
                 Login
             </Button>
         </form>
