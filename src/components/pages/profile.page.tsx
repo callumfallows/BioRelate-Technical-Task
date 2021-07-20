@@ -1,24 +1,26 @@
 import * as React from 'react';
-import {useEffect, useState} from "react";
-import {checkSession} from "../../utilities/authentication";
-import {RootDispatcher} from "../../store/root-redux";
-import {useDispatch, useSelector} from "react-redux";
-import {InitialState} from "../../store/root-reducer";
-import {Auth0Error, Auth0UserProfile} from "auth0-js";
-import LoadSpinner from "../atoms/load-spinner.atom";
+import {Flex, Text, Box} from '@chakra-ui/react';
+import MainNavigation from "../organisms/navigation.organism";
 
-
-interface StateProps {
-    user: Auth0UserProfile | undefined
-    error: Auth0Error | undefined
-}
 
 interface Props {
 }
 
 const ProfilePage: React.FC<Props> = (props) => {
 
-    return <div>Profile</div>
+    return <Flex flexDirection={"column"} color="white">
+        <Box w="100%">
+            <MainNavigation/>
+        </Box>
+        <Flex flexDirection={"row"}>
+            <Box w="30%"  bg="tomato">
+                <Text>Box 2</Text>
+            </Box>
+            <Box w="70%" bg="tomato">
+                <Text>Box 3</Text>
+            </Box>
+        </Flex>
+    </Flex>
 }
 
 

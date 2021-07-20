@@ -6,10 +6,7 @@
     "@babel/core": "^7.14.6",
     "@imaginary-cloud/eslint-config-react": "1.0.1",
     "@imaginary-cloud/prettier-config": "^1.0.0",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/react": "^6.3.4",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
     "babel-loader": "^8.2.2",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -22,16 +19,12 @@
     "parcel": "^2.0.0-alpha.3.2",
     "prettier": "^2.3.2",
     "react-redux": "^7.2.4",
-    "sass": "^1.26.3",
-    "sharp": "^0.28.3",
-    "storybook": "^6.3.4"
+    "sass": "^1.26.3"
   },
   "scripts": {
     "dev": "yarn parcel src/index.html --port 8080",
     "build": "yarn parcel build src/index.html --port 8080",
-    "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -40,6 +33,7 @@
     "@fontsource/inter": "^4.5.0",
     "@types/auth0-js": "^9.14.5",
     "auth0-js": "^9.16.2",
+    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "formik": "^2.2.9",
     "framer-motion": "^4",

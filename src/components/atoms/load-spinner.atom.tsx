@@ -1,9 +1,7 @@
 import {Center, Flex, Spinner} from "@chakra-ui/react";
 import * as React from "react";
 
-interface Props {
-}
-
+interface Props {}
 const LoadSpinner: React.FC<Props> = (props) => {
     return <Flex w="100vw" h="100vh">
         <Center w="100vw">

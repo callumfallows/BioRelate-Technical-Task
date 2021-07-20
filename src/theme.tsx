@@ -1,37 +1,55 @@
-import { extendTheme } from '@chakra-ui/react'
+import {extendTheme} from '@chakra-ui/react'
 
-const theme = extendTheme({
-  styles: {
-    global: {
-      // styles for the `body`
-      body: {
-        padding: 0,
-      }
+const Link = {
+    // The styles all button have in common
+    baseStyle: {
+        fontWeight: "700",
+        color: '#868DA1'
     }
-  },
-  fonts: {
-    heading: 'Inter',
-    body: 'Inter',
-  },
-  colors: {
-    midnight: {
-      100: '#344562',
+}
+const theme = extendTheme({
+    styles: {
+        global: {
+            // styles for the `body`
+            body: {
+                padding: 0,
+            },
+            p: {
+                color: '#868DA1'
+            },
+            a: {
+                color: '#868DA1',
+                fontWeight: 'medium'
+            }
+        }
     },
-    lightGrey: {
-      100: '#BABCD1',
+    fonts: {
+        heading: 'Inter',
+        body: 'Inter',
     },
-    grey: {
-      100: '#868DA1',
+    colors: {
+        midnight: {
+            100: '#344562',
+        },
+        lightGrey: {
+            100: '#BABCD1',
+            500: '#ececec'  
+        },
+        grey: {
+            100: '#868DA1',
+        },
+        primary: {
+            100: '#1A88E8',
+        },
+        blue: {
+            100: '#1A88E8',
+        },
+        green: {
+            100: '#16A63E',
+        },
     },
-    primary: {
-      100: '#1A88E8',
+    components: {
+        Link,
     },
-    blue: {
-      100: '#1A88E8',
-    },
-    green: {
-      100: '#16A63E',
-    },
-  },
 })
 export default theme

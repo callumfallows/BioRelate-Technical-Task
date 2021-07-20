@@ -43,15 +43,6 @@ interface StateProps {
  */
 
 const AuthenticatedTemplate: React.FC<Props> = (props) => {
-    const dispatch = useDispatch()
-    const rootDispatcher = new RootDispatcher(dispatch)
-    const {user} = useSelector<InitialState, StateProps>(
-        (state: InitialState) => {
-            return {
-                user: state.user
-            }
-        },
-    )
     const [loaded, setLoaded] = useState(false)
     const [error, setError] = useState(false)
     const auth = async () => {
@@ -68,7 +59,7 @@ const AuthenticatedTemplate: React.FC<Props> = (props) => {
     }, [])
 
     if (!loaded) {
-        <LoadSpinner/>
+        return <LoadSpinner/>
     }
 
     if (error) {
@@ -76,7 +67,7 @@ const AuthenticatedTemplate: React.FC<Props> = (props) => {
         return <Redirect to={redirectUrl}/>
     }
 
-    return <div>{props.children}</div>
+    return <>{props.children}</>
 }
 
 export default AuthenticatedTemplate
